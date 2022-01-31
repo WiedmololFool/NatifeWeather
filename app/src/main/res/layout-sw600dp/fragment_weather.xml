@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context=".FragmentWeather">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/custom_toolbar" />
+
+    <ScrollView
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/updated_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Последнее обновление"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:id="@+id/current_weather"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/current_temperature_field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="-4 °C"
+                        android:textColor="@color/white"
+                        android:textSize="70sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/minmax_temp_field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Макс: 25° Мин: 10°"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/feels_like_field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/current_temperature_field"
+                        android:text="Ощущается как 24°"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/weather_icon"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/ic_white_day_cloudy" />
+
+                    <TextView
+                        android:id="@+id/details_field"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/weather_icon"
+                        android:text="Пасмурно\nВлажность: 100\nДавление 999 "
+                        android:textColor="@color/white"
+                        android:textSize="22sp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/current_wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/constraintLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:id="@+id/wind_header"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wind_header"
+                            android:textColor="@color/white"
+                            android:textSize="25sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/wind_speed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="50"
+                            android:textColor="@color/white"
+                            android:textSize="70sp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/wind_header" />
+
+                        <ImageView
+                            android:id="@+id/wind_icon"
+                            android:layout_width="50sp"
+                            android:layout_height="50sp"
+                            android:layout_marginLeft="5sp"
+                            android:layout_marginTop="10sp"
+                            android:src="@drawable/ic_icon_wind_e"
+                            app:layout_constraintStart_toEndOf="@id/wind_speed"
+                            app:layout_constraintTop_toTopOf="@id/wind_speed" />
+
+                        <TextView
+                            android:id="@+id/wind_units"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wind_units_metric"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="@id/wind_icon"
+                            app:layout_constraintTop_toBottomOf="@id/wind_icon" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/wind_direct"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Северо-западный"
+                        android:textColor="@color/white"
+                        android:textSize="35sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/forecast_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/forecast_header"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <ListView
+                android:id="@+id/forecast_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"></ListView>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/waiting_field"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/data_load_fail"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+</RelativeLayout>

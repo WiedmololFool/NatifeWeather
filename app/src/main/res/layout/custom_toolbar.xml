@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/blue"
+    android:padding="10sp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_background"
+        >
+
+        <AutoCompleteTextView
+            android:id="@+id/search_field"
+            android:paddingStart="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_search"
+            android:singleLine="true"
+            android:drawablePadding="15sp"
+            android:backgroundTint="@color/white"
+            android:hint="Введите город ..."
+            android:textColorHint="@color/grey"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:inputType="textNoSuggestions"
+            android:selectAllOnFocus="true"
+            android:completionThreshold="1"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+          />
+        <ImageView
+            android:id="@+id/reload_icon"
+            android:layout_alignParentEnd="true"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:src="@drawable/ic_reload"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

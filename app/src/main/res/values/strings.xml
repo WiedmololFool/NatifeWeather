@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">NatifeWeather</string>
+    <string name="change_city">Change city</string>
+    <string name="open_weather_maps_app_id">11111</string>
+
+    <string name="weather_sunny">&#xf00d;</string>
+    <string name="weather_clear_night">&#xf02e;</string>
+    <string name="weather_foggy">&#xf014;</string>
+    <string name="weather_cloudy">&#xf013;</string>
+    <string name="weather_rainy">&#xf019;</string>
+    <string name="weather_snowy">&#xf01b;</string>
+    <string name="weather_thunder">&#xf01e;</string>
+    <string name="weather_drizzle">&#xf01c;</string>
+
+    <string name="data_load_fail">Не удалось загрузить данные</string>
+    <string name="forecast_header">Прогноз погоды на 8 дней</string>
+    <string name="wind_units_metric">м/с</string>
+    <string name="wind_header">Ветер</string>
+    <string name="waiting_text">Ожидайте...</string>
+    <string name="weather_update_message">Погода обновлена</string>
+    <string name="humidity">"Влажность:"</string>
+    <string name="pressure">"Давление:"</string>
+    <string name="pressure_units">мбар</string>
+    <string name="last_update">Последнее обновление:</string>
+    <string name="max_temp">Макс:</string>
+    <string name="min_temp">Мин:</string>
+    <string name="feels_like">Ощущается как</string>
+    <string name="wind_calm">Штиль</string>
+    <string name="wind_dir_n">Северный</string>
+    <string name="wind_dir_ne">Северо-восточный</string>
+    <string name="wind_dir_e">Восточный</string>
+    <string name="wind_dir_se">Юго-Восточный</string>
+    <string name="wind_dir_s">Южный</string>
+    <string name="wind_dir_sw">Юго-западный</string>
+    <string name="wind_dir_w">Западный</string>
+    <string name="wind_dir_nw">Северо-западный</string>
+    <string name="wind_dir_n_short">С</string>
+    <string name="wind_dir_ne_short">СВ</string>
+    <string name="win_dir_e_short">В</string>
+    <string name="win_dir_se_short">ЮВ</string>
+    <string name="wind_dir_s_short">Ю</string>
+    <string name="wind_dir_sw_short">ЮЗ</string>
+    <string name="wind_dir_w_short">З</string>
+    <string name="wind_dir_nw_short">СЗ</string>
+</resources>
