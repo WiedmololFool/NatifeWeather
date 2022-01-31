@@ -19,7 +19,7 @@
             android:singleLine="true"
             android:drawablePadding="15sp"
             android:backgroundTint="@color/white"
-            android:hint="Введите город ..."
+            android:hint="@string/input_city_hint"
             android:textColorHint="@color/grey"
             android:textSize="20sp"
             android:textColor="@color/black"

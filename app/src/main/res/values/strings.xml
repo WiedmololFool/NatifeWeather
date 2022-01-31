@@ -42,4 +42,5 @@
     <string name="wind_dir_sw_short">ЮЗ</string>
     <string name="wind_dir_w_short">З</string>
     <string name="wind_dir_nw_short">СЗ</string>
+    <string name="input_city_hint">Введите город ...</string>
 </resources>
